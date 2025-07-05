@@ -1,0 +1,84 @@
+<div class="boite-list-container">
+  <h2>Liste des Boîtes</h2>
+  
+  <div class="add-button-container">
+    <button mat-raised-button color="primary" (click)="rest()">Home Page </button>
+    <button mat-raised-button color="primary" (click)="carte()">Voir sur la carte</button>
+    <button *ngIf="isAdmin()" mat-raised-button color="primary" (click)="onAdd()">Ajouter une Boîte</button>
+  </div>
+
+  <div class="search-container">
+    <input [(ngModel)]="searchText" (input)="applyFilters()" placeholder="Rechercher..." />
+  </div>
+
+  <table mat-table [dataSource]="filteredBoites" class="mat-elevation-z8">
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('id')">ID</th>
+      <td mat-cell *matCellDef="let boite" (click)="onRowClick(boite.id)">
+        {{ boite.id }}
+      </td>
+    </ng-container>
+
+    <!-- Quantité Column -->
+    <ng-container matColumnDef="quantite">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('quantite')">Quantité</th>
+      <td mat-cell *matCellDef="let boite" (click)="onRowClick(boite.id)">
+        {{ boite.quantite }}
+      </td>
+    </ng-container>
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('nom')">Nom</th>
+      <td mat-cell *matCellDef="let boite" (click)="onRowClick(boite.id)">
+        {{ boite.nom }}
+      </td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('description')">Description</th>
+      <td mat-cell *matCellDef="let boite" (click)="onRowClick(boite.id)">
+        {{ boite.description }}
+      </td>
+    </ng-container>
+
+    <!-- Point Géographique Column -->
+    <ng-container matColumnDef="pointGeo">
+      <th mat-header-cell *matHeaderCellDef (click)="sort('pointGeo')">Point Géographique</th>
+      <td mat-cell *matCellDef="let boite" (click)="onRowClick(boite.id)">
+        {{ boite.pointGeo }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let boite">
+        <div class="action-buttons">
+          <button *ngIf="isAdmin()" mat-icon-button color="primary" matTooltip="Modifier" aria-label="Update" (click)="onUpdate(boite)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button *ngIf="isAdmin()" mat-icon-button color="warn" matTooltip="Supprimer" aria-label="Delete" (click)="onDelete(boite.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" matTooltip="Déclarer une réservation" aria-label="Déclarer une réservation" (click)="declareReservation(boite)">
+            <mat-icon>event_available</mat-icon>
+          </button>
+          <button *ngIf="isAdmin()" mat-icon-button color="primary" matTooltip="Afficher les Réservations" aria-label="Afficher les Réservations" (click)="openReservationsDialog(boite.id)">
+            <mat-icon>list_alt</mat-icon>
+          </button>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="pagination-controls">
+    <button mat-raised-button color="accent" [disabled]="pageIndex <= 0" (click)="changePage(pageIndex - 1)">Précédent</button>
+    <span>Page {{ pageIndex + 1 }} / {{ totalPages }}</span>
+    <button mat-raised-button color="accent" [disabled]="pageIndex >= totalPages - 1" (click)="changePage(pageIndex + 1)">Suivant</button>
+  </div>
+</div>

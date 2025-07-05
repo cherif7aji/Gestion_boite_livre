@@ -1,0 +1,58 @@
+mat-dialog-content {
+  font-size: 16px;
+  background-color: #ffffff; /* White for clean appearance */
+  color: #37474f; /* Dark gray text for readability */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+mat-form-field {
+  margin-top: 10px;
+  width: 100%;
+}
+
+mat-form-field.mat-form-field-appearance-fill {
+  background-color: #f9f9f9; /* Soft white-gray fill for input */
+  border-radius: 4px;
+}
+
+mat-form-field.mat-focused .mat-form-field-outline {
+  color: #1e3a5f; /* Deep blue for focus outline */
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #f5faff; /* Light blue background for action section */
+  border-top: 1px solid #e0e0e0; /* Subtle divider */
+}
+
+button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button.mat-button {
+  color: #ffffff; /* White text for contrast */
+}
+
+button[color="primary"] {
+  background-color: #4caf50; /* Green for primary actions */
+  color: #ffffff;
+}
+
+button[color="primary"]:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+button.mat-button:not([color]) {
+  background-color: #ffcdd2; /* Light red for secondary actions */
+  color: #b71c1c; /* Deep red for text */
+}
+
+button.mat-button:not([color]):hover {
+  background-color: #ef9a9a; /* Slightly darker red on hover */
+}

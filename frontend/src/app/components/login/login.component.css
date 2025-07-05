@@ -1,0 +1,90 @@
+/* Style de la carte */
+mat-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  background-color: #ffffff; /* Couleur de fond */
+}
+
+/* En-tête de la carte */
+mat-card-header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 120px;
+}
+
+mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50; /* Couleur primaire */
+}
+
+/* Champs de saisie */
+input[matInput] {
+  display: block;
+  width: 100%; /* Prend toute la largeur */
+  margin: 15px 0; /* Espacement entre les champs */
+  padding: 10px;
+  border-radius: 8px; /* Coins arrondis */
+  border: 1px solid #ccc; /* Bordure grise */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre interne subtile */
+  font-size: 14px;
+  background-color: #f9f9f9; /* Fond léger */
+}
+
+input[matInput]:focus {
+  outline: none;
+  border-color: #4caf50; /* Bordure bleue au focus */
+  background-color: #ffffff; /* Fond blanc */
+  box-shadow: 0 0 4px #4caf50; /* Lumière bleutée */
+}
+
+/* Messages d'erreur */
+mat-error {
+  font-size: 12px;
+  color: #d32f2f; /* Rouge pour les erreurs */
+  margin-top: -10px; /* Réduit l'espacement vertical */
+  margin-bottom: 10px;
+}
+
+/* Bouton de connexion */
+button[mat-raised-button] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0px 4px 8px #4caf50; /* Ombre bleutée */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #4caf50; /* Couleur plus foncée au survol */
+  transform: scale(1.02); /* Légère mise en avant */
+}
+
+/* Message d'erreur global */
+div[style*='color: red'] {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  mat-card {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  mat-card-title {
+    font-size: 20px;
+  }
+
+  button[mat-raised-button] {
+    font-size: 14px;
+  }
+}

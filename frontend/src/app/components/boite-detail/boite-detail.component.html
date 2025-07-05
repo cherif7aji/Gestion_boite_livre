@@ -1,0 +1,14 @@
+<div *ngIf="boite" class="container">
+    
+      <h2>{{ boite.nom }}</h2> <!-- Affiche le nom de la boîte -->
+      <p><strong>Description:</strong> {{ boite.description }}</p> <!-- Affiche la description -->
+      <p><strong>Quantité:</strong> {{ boite.quantite }}</p> <!-- Affiche la quantité -->
+      <p><strong>Point Géographique:</strong> {{ boite.pointGeo }}</p> <!-- Affiche le point géographique -->
+    
+  </div>
+  
+  <!-- Si la boîte n'est pas encore chargée, afficher un message de chargement -->
+  <div *ngIf="!boite" class="loading-message">
+    <p>Chargement de la boîte...</p>
+  </div>
+  

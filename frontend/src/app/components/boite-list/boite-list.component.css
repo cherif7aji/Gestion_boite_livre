@@ -1,0 +1,230 @@
+.boite-list-container {
+  padding: 30px;
+  background-color: #fdfdfd; /* Blanc doux */
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre élégante */
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  color: #1e3a5f; /* Bleu profond */
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4);
+}
+
+.pagination-controls button[disabled] {
+  opacity: 0.5;
+}
+
+.pagination-controls span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+
+
+/* Conteneur de recherche */
+.search-container {
+  margin-left: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Conteneur des boutons */
+.add-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Fond blanc pour le tableau */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Ombre subtile */
+}
+
+th {
+  background-color: #e3f2fd; /* Bleu pastel clair */
+  color: #0d47a1; /* Bleu profond */
+  text-align: left;
+  padding: 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+td {
+  padding: 14px 16px;
+  color: #37474f; /* Gris profond */
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0; /* Ligne discrète entre les lignes */
+}
+
+tr:hover {
+  background-color: #f5faff; /* Bleu ultra clair au survol */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.actions-cell {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacement entre les boutons */
+}
+
+button {
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button[color="primary"] {
+  background-color: #c8e6c9; /* Vert pastel clair */
+  color: #1b5e20; /* Vert foncé */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(27, 94, 32, 0.2);
+}
+
+button[color="primary"]:hover {
+  background-color: #a5d6a7; /* Vert légèrement plus vif */
+  box-shadow: 0 4px 8px rgba(27, 94, 32, 0.3);
+}
+
+button[color="warn"] {
+  background-color: #ffcdd2; /* Rouge pastel clair */
+  color: #b71c1c; /* Rouge foncé */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(183, 28, 28, 0.2);
+}
+
+button[color="warn"]:hover {
+  background-color: #ef9a9a; /* Rouge légèrement plus vif */
+  box-shadow: 0 4px 8px rgba(183, 28, 28, 0.3);
+}
+
+.add-button-container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.add-button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-button-container button:last-child {
+  margin-right: 0; /* Supprime la marge à droite du dernier bouton */
+}
+
+.add-button-container button:hover {
+  background-color: #45a049;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espace entre les boutons */
+}
+
+.autres-actions-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espace entre les boutons */
+}
+
+mat-icon {
+  font-size: 18px; /* Réduire la taille des icônes */
+}
+
+button[mat-icon-button] {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+
+
+/* Media Queries pour un design responsive */
+@media (max-width: 768px) {
+  th, td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+
+}

@@ -1,0 +1,51 @@
+<div class="user-home-container">
+    <h2 class="page-title">Home page</h2>
+  
+    <div class="action-buttons">
+      <button mat-raised-button color="primary" class="toggle-btn" (click)="toggleTableVisibility()">
+        {{ isTableVisible ? 'Cacher les Réservations' : '🗂 Afficher les Réservations' }}
+      </button>
+  
+      <button mat-raised-button color="accent" class="list-btn" (click)="navigateToListBoites()">
+        🗂 Voir Toutes les Boîtes
+      </button>
+
+      <button *ngIf="isAdmin()" mat-raised-button color="accent" class="list-btn" (click)="navigateToListUsers()">
+        🗂 Gestion Des utilisateurs
+      </button>
+    </div>
+  
+    <div *ngIf="isTableVisible" [@fadeInOut]>
+      <table mat-table [dataSource]="reservations" class="mat-elevation-z8 reservation-table">
+        <!-- Boite Name Column -->
+        <ng-container matColumnDef="boiteName">
+          <th mat-header-cell *matHeaderCellDef> 📦 Boîte </th>
+          <td mat-cell *matCellDef="let reservation"> {{ reservation.boite.nom }} </td>
+        </ng-container>
+  
+        <!-- Reservation Count Column -->
+        <ng-container matColumnDef="reservationCount">
+          <th mat-header-cell *matHeaderCellDef> 🔢 Quantité Réservée </th>
+          <td mat-cell *matCellDef="let reservation"> {{ reservation.reservation }} </td>
+        </ng-container>
+  
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> ⚙️ Actions </th>
+          <td mat-cell *matCellDef="let reservation">
+            <button mat-raised-button color="warn" (click)="onReturn(reservation)">
+              Rendre
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+      <div *ngIf="reservations.length === 0" class="no-reservations">
+        <p>🎉 Vous n'avez aucune réservation actuellement.</p>
+      </div>
+    </div>
+  </div>
+  

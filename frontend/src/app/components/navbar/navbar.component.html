@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Boite de livres</a>
+      <button 
+        *ngIf="isLoggedIn()" 
+        class="btn btn-outline-danger" 
+        (click)="logout()">
+        Déconnexion
+      </button>
+    </div>
+  </nav>
+  

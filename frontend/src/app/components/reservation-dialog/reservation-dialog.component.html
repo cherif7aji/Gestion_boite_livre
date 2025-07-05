@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Réserver des livres</h1>
+<div mat-dialog-content>
+  <p>Combien de livres voulez-vous réserver ?</p>
+  <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-label>Quantité</mat-label>
+    <input matInput [(ngModel)]="reservationCount" type="number" min="1" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Annuler</button>
+  <button mat-button color="primary" [disabled]="!reservationCount || reservationCount <= 0" (click)="onReserve()">Réserver</button>
+</div>

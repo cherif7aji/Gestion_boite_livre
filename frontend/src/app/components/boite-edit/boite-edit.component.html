@@ -1,0 +1,29 @@
+<div class="boite-edit-container">
+    <h2>Modifier la Boîte</h2>
+  
+    <form [formGroup]="boiteForm" (ngSubmit)="onSubmit()">
+      <label>
+        Nom:
+        <input formControlName="nom" type="text" />
+      </label>
+      <br />
+      <label>
+        Quantité:
+        <input formControlName="quantite" type="number" />
+      </label>
+      <br />
+      <label>
+        Description:
+        <textarea formControlName="description"></textarea>
+      </label>
+      <br />
+      <label>
+        Point Géographique:
+        <input formControlName="pointGeo" type="text" />
+      </label>
+      <br />
+      <button type="submit" [disabled]="boiteForm.invalid">Enregistrer</button>
+      <button type="button" (click)="onCancel()">Annuler</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,86 @@
+.mat-dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Arrière-plan noir semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espacement intérieur pour le popup */
+    z-index: 1000; /* Assurez-vous qu'il reste au-dessus des autres éléments */
+    box-sizing: border-box;
+    overflow-y: auto; /* Ajout de scroll si le contenu dépasse l'écran */
+}
+
+.container {
+    background-color: #ffffff; /* Fond blanc pour le popup */
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Largeur maximale */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+}
+
+
+
+h2 {
+    color: #1e3a5f; /* Bleu profond utilisé dans le titre du tableau */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; /* Uniformiser avec le style des titres du tableau */
+    letter-spacing: 1.5px; /* Espacement harmonisé */
+}
+
+.form-label {
+    color: #1e3a5f; /* Bleu profond pour les étiquettes */
+    font-weight: 600; /* Alignement avec le style global */
+}
+
+input.form-control {
+    border: 1px solid #d6e0f5; /* Même bordure douce et harmonieuse */
+    border-radius: 4px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input.form-control:focus {
+    border-color: #1e3a5f; /* Accent bleu foncé cohérent */
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 95, 0.25); /* Effet de focus cohérent */
+}
+
+button[type="submit"] {
+    background-color: #4caf50; /* Vert pour correspondre au bouton "Créer un utilisateur" */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Alignement avec le bouton vert du tableau */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase; /* Harmoniser avec les boutons du tableau */
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Surbrillance verte */
+}
+
+/* Ajout de styles pour un design responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input.form-control {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
