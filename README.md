@@ -1,10 +1,9 @@
 # Gestion_boite_livre
-application de gesstion des boites à livres situés à Tours:
-à partir de la base de données des boites à livres sur le site https://data.tours-metropole.fr/explore/dataset/boites-a-livre-tours-metropole-val-de-loire/table/
-j'ai crée une application Springboot/angular permettant aux gens de déclarer leurs réservations au sein des boites à livres et ainsi aux gestionnaires de ces boites de suivre les réservations et les disponnibilités des livres au sein de ses boites d'une façon pratique (sur une carte géographique, sur une liste déroulante) et aussi quels sont les utilisateurs qui ont fait des réservations.
+Application de gestion des boîtes à livres situées à Tours :
+À partir de la base de données des boîtes à livres disponible sur le site https://data.tours-metropole.fr/explore/dataset/boites-a-livre-tours-metropole-val-de-loire/table/,
+j’ai créé une application Spring Boot/Angular permettant aux gens de déclarer leurs réservations au sein des boîtes à livres, et ainsi aux gestionnaires de ces boîtes de suivre les réservations et la disponibilité des livres d’une façon pratique (sur une carte géographique, via une liste déroulante), ainsi que de savoir quels sont les utilisateurs ayant effectué des réservations.
 
-Page d'acceuil pour un utilisateur avec le role admin
-
+Page d’accueil pour un utilisateur avec le rôle admin.
 ![image](https://github.com/user-attachments/assets/b131e44d-208b-4f50-b97e-3c0ac78475f3)
 
 Liste des boites (disponible uniquement pour un utilisateur avec le role admin)
@@ -14,7 +13,7 @@ Visualiser les boites sur une carte (disponible uniquement pour un utilisateur a
 
 ![image](https://github.com/user-attachments/assets/b806aa1f-4934-4f64-aac1-4faf447598f4)
 
-opérations CRUD sur les utilisateurs:
+Opérations CRUD sur les utilisateurs:
 ![image](https://github.com/user-attachments/assets/9b934c34-f010-4d35-b3c9-b8f525be0191)
 
 
