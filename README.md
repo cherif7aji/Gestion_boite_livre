@@ -24,7 +24,7 @@ Déclarer une réservation:
 Declarer que vous avez rendu un livre:
 ![image](https://github.com/user-attachments/assets/69223b03-b106-40d7-8c20-954efe8e3ee7)
 
-Créer votre compte:
+Créez votre compte:
 ![image](https://github.com/user-attachments/assets/43f96f18-59bb-43bd-8d9e-3f66cfc007a1)
 
 
